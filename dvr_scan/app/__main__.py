@@ -181,7 +181,7 @@ def main():
         errors = [message for (severity, message) in init_log if severity >= logging.ERROR]
         tkinter.messagebox.showerror(
             title="DVR-Scan Startup Error",
-            message=f"Error loading config file. Reason:\n\n{'\n'.join(errors)}",
+            message="Error loading config file. Reason:\n\n{}".format('\n'.join(errors)),
         )
         raise SystemExit(1)
 
